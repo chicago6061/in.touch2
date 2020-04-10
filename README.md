@@ -45,6 +45,7 @@ CheckSpa -38 days
 <ul>
 <li>Figure out initial handshake mechanism to obtain Source Connection(?) value.</li>
 <li>Incorporate set functions:
+
 ```
 # Set Watercare
 spack = '<PACKT><SRCCN>xxx</SRCCN><DESCN>yyy</DESCN><DATAS>SPACK#SEQ#\x0a\x07\x46\x35\x35\x00\x01#TEMP#</DATAS></PACKT>'
@@ -63,6 +64,7 @@ def setTargetTemp(temp):
         data = recv()
         return ''
 ```
+
 </li>
 </ul>
 
