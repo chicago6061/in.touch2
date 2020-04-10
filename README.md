@@ -14,7 +14,6 @@ Channel: 30<br>
 Setpoint: 70.  Current Temperature: 90.  Lights: 0.  Version: inYT 177 v3.0.  Base config: 5.
 ```
 
-<br>
 \# ./dumpall.py<br>
 ```
 ...
@@ -28,7 +27,6 @@ Setpoint: 70.  Current Temperature: 90.  Lights: 0.  Version: inYT 177 v3.0.  Ba
 263 0x0 RemoteFiltAction, 
 ...
 ```
-
 For 260, value is 0x20 => 0010 0000 => 5th bit is set and thus MSTR_HEATER(5) is on<br>
 For 261, value ix 0x02 => 0000 0010 => 1st bit is set and thus P1 is on<br>
 <br>
