@@ -12,7 +12,9 @@ Experimental code based on analysis of mobile app network traffic.
 Channel: 30<br>
 Setpoint: 70.  Current Temperature: 90.  Lights: 0.  Version: inYT 177 v3.0.  Base config: 5.
 
+<br>
 \# ./dumpall.py<br>
+<pre>
 ...
 256 0x12 Hours, 
 257 0x0 QuietState, 
@@ -23,15 +25,19 @@ Setpoint: 70.  Current Temperature: 90.  Lights: 0.  Version: inYT 177 v3.0.  Ba
 262 0x5 FilterAccess(0),EconomyAccess(2),OnzenAccess(1), 
 263 0x0 RemoteFiltAction, 
 ...
-For 260, value is 0x20 => 0010 0000 => 5th bit is set and thus MSTR_HEATER(5) is on
-For 261, value ix 0x02 => 0000 0010 => 1st bit is set and thus P1 is on
+</pre>
+For 260, value is 0x20 => 0010 0000 => 5th bit is set and thus MSTR_HEATER(5) is on<br>
+For 261, value ix 0x02 => 0000 0010 => 1st bit is set and thus P1 is on<br>
+<br>
 
 \# ./dumpreminders.py<br>
+<pre>
 Connected.  ('192.168.2.231', 10022)
 RinseFilter 30 days
 CleanFilter 60 days
 ChangeWater 90 days
 CheckSpa -38 days
+</pre>
 
 ## TODO
 
