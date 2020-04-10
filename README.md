@@ -9,8 +9,10 @@ Experimental code based on analysis of mobile app network traffic.
 ## Example
 
 \# ./spa.py<br>
+```
 Channel: 30<br>
 Setpoint: 70.  Current Temperature: 90.  Lights: 0.  Version: inYT 177 v3.0.  Base config: 5.
+```
 
 <br>
 \# ./dumpall.py<br>
