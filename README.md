@@ -44,10 +44,25 @@ CheckSpa -38 days
 
 <ul>
 <li>Figure out initial handshake mechanism to obtain Source Connection(?) value.</li>
-<li>Decode additional messages
-  <ul>
-  <li>Lines 1-6 of GetStatus</li>
-  </ul>
+<li>Incorporate set functions:
+```
+# Set Watercare
+spack = '<PACKT><SRCCN>xxx</SRCCN><DESCN>yyy</DESCN><DATAS>SPACK#SEQ#\x0a\x07\x46\x35\x35\x00\x01#TEMP#</DATAS></PACKT>'
+def setWatercare(value):
+        msg = setwc.replace('#WC#', struct.pack('>B', value))   # one bytes
+        send(msg)
+        data = recv()
+        return ''
+
+# Set Target temperature
+setwc = '<PACKT><SRCCN>xxx</SRCCN><DESCN>yyy</DESCN><DATAS>SETWC#SEQ##WC#</DATAS></PACKT>'
+def setTargetTemp(temp):
+        value = (temp - 32) * 10
+        msg = spack.replace('#TEMP#', struct.pack('>H', value))   # two bytes
+        send(msg)
+        data = recv()
+        return ''
+```
 </li>
 </ul>
 
